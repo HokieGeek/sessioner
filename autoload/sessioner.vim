@@ -1,3 +1,8 @@
+if exists("g:autoloaded_sessioner") || v:version < 700
+    finish
+endif
+let g:autoloaded_sessioner = 1
+
 function! sessioner#initiate()
     let l:sessions_dir = $HOME."/.vim/sessions"
     if isdirectory(l:sessions_dir)

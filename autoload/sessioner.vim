@@ -5,7 +5,7 @@ let g:autoloaded_sessioner = 1
 
 function! sessioner#initiate()
     let l:sessions_dir = $HOME."/.vim/sessions"
-    if isdirectory(l:sessions_dir)
+    if !isdirectory(l:sessions_dir)
         call system("mkdir ".l:sessions_dir)
     endif
     let b:sessioner_session_file = l:sessions_dir."/".expand("%:t").".session"
